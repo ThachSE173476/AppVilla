@@ -1,0 +1,43 @@
+@use '../../sass/' as *;
+
+.section-header {
+    text-align: center;
+    margin: 0px auto;
+    width: 516px;
+    padding: 0 12px;
+    h3 {
+        font-size:15px;
+        font-weight: 600;
+        line-height: 18px;
+        margin:0px 0px 8px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $primary-color;
+    }
+
+    h1 {
+        color: #081828;
+        font-family: inter;
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 42px;
+        margin: 0px 0px 25px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    p {
+        color: #888888;
+        font-family: inter;
+        font-size: 15px;
+        line-height: 24px;
+        text-align: center;
+    }
+}
+
+@include mobile {
+    .section-header {
+        max-width: 516px;
+        width: 90%;
+    }
+}

@@ -1,0 +1,124 @@
+@use '../../sass/' as *;
+
+.faq {
+    padding: 100px 0 80px;
+    width: 100%;
+    background-color: #fff;
+
+    &-container {
+        margin-top: 80px;
+
+    }
+
+    &-accordion {
+        margin: 0 auto 20px;
+        width: 90%;
+        transition: all .2s ease;
+        cursor: pointer;
+        &__title {
+            border-color: #eeeeee;
+            border-radius: 8px;
+            border-style: solid;
+            border-width: 1px;
+            color: #212529;
+            font-family: inter;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 20.4px;
+            padding: 20px 40px 20px 20px;
+            text-align: left;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            &--bullet {
+                display: flex;
+                span {
+                    border-color: #eeeeee;
+                    border-radius: 50%;
+                    border-style: solid;
+                    border-width: 1px;
+                    color: #081828;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    text-align: center;
+                    width: 30px;
+                    height: 30px;
+                }
+                h1 {
+                    color: #212529;
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 25px;
+                    padding: 0px 0px 0px 45px;
+                    text-align: left;
+                    margin-top: 3px;
+                }
+            }
+    
+            i {
+                color: #212529;
+                font-size: 13px;
+                line-height: 13px;
+                &:last-child {
+                    display: none;
+                }
+            }
+
+            
+        }
+        &__body {
+            width: 100%;
+            background-color:#f9f9f9;
+            border-radius: 0px 0px 8px 8px;
+            color: #888888;
+            font-size: 15px;
+            line-height: 22.5px;
+            padding: 40px;
+            display: none;
+            p {
+                color: #777777;
+                font-family: inter;
+                font-size: 15px;
+                line-height: 24px;
+                margin: 0px 0px 20px;
+            }
+        }
+
+        &.active {
+            .faq-accordion{
+                &__title {
+                    background-color: #ff6b81;
+                    border-radius: 8px 8px 0px 0px;
+                    border-style: solid;
+                    border-width: 1px;
+                    color: #ffffff;
+                    font-size: 17px;
+                    font-weight: 500;
+                    line-height: 20.4px;
+                    padding: 20px 40px 20px 20px;
+                    text-align: left;
+                    span {
+                        background-color: #fff;
+                        color: #081828;
+                    }
+                    h1 {
+                        color: #fff;
+                    }
+                    i {
+                        color: #fff;
+                        display: none;
+                        &:last-child {
+                            display: block;
+                        }
+                    }
+                }
+                &__body {
+                    display: block;
+                }
+            }
+        }
+    }
+}

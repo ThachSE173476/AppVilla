@@ -1,0 +1,22 @@
+@use './variable';
+
+@mixin flex($justify-content, $align-item) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-item;
+}
+
+@mixin grid($gap) {
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    
+}
+
+@mixin hover {
+    transform: translateY(-4px);
+    box-shadow: $box-shadow;
+    transition: all 0.4s ease-in-out;
+}

@@ -1,0 +1,208 @@
+@use '../../sass/' as *;
+header {
+    width: 100%;
+    background-color: $primary-color;
+    transition: all .2s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    .header {
+        max-width: 1116px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        height: 93px;
+        &-logo {
+            svg {
+                width: 160px;
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+        &-routes {
+            display: flex;
+            gap: 40px;
+            li {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    width: 100%;
+                    height: 30px;
+                    background-color: transparent;
+                }
+                &:hover .header-route-sub {
+                    display: flex;
+                }
+            }
+        }
+        &-route {        
+            color: #fff;
+            font-size: $para-font-size;
+            font-weight:600;
+            line-height:22.5px;
+            text-transform: capitalize;
+            &-icon {
+                font-size: 18px;
+                color: #fff;
+                display: none;
+            }
+            
+            &-sub {
+                width: 240px;
+                height: fit-content;
+                background-color: #fff;
+                border-radius: $border-radius;
+                position: absolute;
+                left: 0;
+                top: calc(100% + 16px);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 30px;
+                display: none;
+                z-index: 10;
+                span {
+                    align-items:center;
+                    border-radius: 4px;
+                    color: #888888;
+                    font-family: inter;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height:21px;
+                }
+            }
+            
+            
+        }
+        &-button {
+            border: 2px solid #fff;
+        }
+
+        &-bars {
+            display:none;
+            i {
+                font-size: 24px;
+                color: #fff;
+            }
+        }
+        &-scroll{
+            .header-logo {
+                svg {
+                    width: 160px;
+                    &:first-child {
+                        display: none;
+                    }
+                    &:last-child {
+                        display: block;
+                    }
+                }
+            }
+            .header-route{
+                color: #000;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+            .header-button {
+                border: none;
+            }
+        }
+    }
+    @include tablet {
+        .header {
+            padding: 0 36px;
+            justify-content: space-between;
+            position: relative;
+            &-routes {
+                display: none;
+                &.mobile {
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 100%;
+                    transform: translate(-50%, 0);
+                    width: 426px;
+                    height:fit-content;
+                    background-color: #fff;
+                    border-radius: $border-radius;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+                    padding: 10px 20px;
+                    .header-route {
+                        line-height: 21px;
+                        padding: 12px 16px;
+                        color: #000;
+                        display: block;
+                        &:hover {
+                            color: $primary-color;
+                        }
+                        &-icon {
+                            color: #000;
+                            display: block;
+                            &:hover {
+                                color: $primary-color;
+                            }
+                        }
+                        &-sub {
+                            width: 100%;
+                            box-shadow: $box-shadow;
+                        }
+                    }
+
+                    li {
+                        width: 100%;
+                        &:hover .header-route-sub {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &-bars {
+                display: block;
+            }
+            &-button {
+                display: none;
+            }
+        }
+    }
+}
+.shrink {
+    background-color: #fff;
+    
+    .header {
+        &-logo {
+            svg {
+                &:first-child {
+                    display: none;
+                }
+                &:last-child {
+                    display: block;
+                }
+            }
+        }
+        &-route {
+            color: #000;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        &-bars {
+            i {
+                color: $primary-color;
+            }
+        }
+        &-button {
+            border: 2px solid $primary-color;
+        }
+    }
+}

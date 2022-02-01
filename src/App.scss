@@ -1,0 +1,78 @@
+@use './sass' as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font
+}
+
+html {
+    font-size: 100%;
+    @include tablet {
+        font-size: 80%;
+    }
+
+    @include mobile {
+        font-size: 60%;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+button, input {
+    outline: none;
+    border: none;
+}
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.button {
+    background-color: $primary-color;
+    border-radius: 5px;
+    color: #ffffff;
+    display: inline-block;
+    font-family: inter;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22.5px;
+    padding: 13px 30px;
+    text-align: center;
+    text-transform: capitalize;
+
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
+
+.button-icon {
+    background-color: $primary-color;
+    border-radius: 7px;
+    box-shadow: $box-shadow;
+    color: #ffffff;
+    display: inline-block;
+    font-size:20px;
+    width: 60px;
+    height: 60px;
+    text-align:center;
+    i {
+        font-size: 20px;
+        margin: auto;
+    }
+}
+
+.section {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+

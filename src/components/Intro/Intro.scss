@@ -1,0 +1,127 @@
+@use '../../sass/' as *;
+
+
+.intro {
+    width: 100%;
+    height: 820px;
+    background-color: $primary-color;
+    padding: 180px 0 120px;
+    &-wrapper {
+        display: flex;
+        max-width: 1140px;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        height: 520px;
+        flex-wrap: wrap;
+        
+    }
+    &-text {
+        width: 40%;
+        padding: 0 12px;
+        margin-top: -12px;
+        h1 {
+            color: #ffffff;
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 50px;
+            text-align:  left;
+            text-transform: capitalize;
+            margin-top: 16px;
+        }
+        p {
+            color: #ffffff;
+            font-family: inter;
+            font-size: 15px;
+            line-height: 24px;
+            margin: 30px 0px 40px;
+            text-align: left;
+        }
+        &-buttons {
+            display: flex;
+            gap: 20px;
+            .button {
+                border: 2px solid #fff;
+                min-width: 158px;
+                height: 50px;
+                transition: all .3s ease-in-out;
+                &:hover {
+                    border: none;
+                    background-color: #fff;
+                    color: $primary-color;
+                    opacity: 1;
+                }
+            }
+            i {
+                font-size: 18px;
+                margin-right: 5px;
+            }
+        }
+    }
+    &-img {
+        width: 60%;
+        img {
+            width: 100%;
+            height: 520px;
+        }
+    }
+    
+}
+
+@include mobile {
+    .intro {
+        height: fit-content;
+        &-wrapper {
+            height: fit-content;
+            background-color: $primary-color;
+        }
+        &-text {
+            width: 100%;
+            text-align: center;
+            &-buttons {
+                justify-content: center;
+            }
+        }
+        &-img {
+            width: 100%;
+            display: none;
+            img {
+                object-position: center;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .intro {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &-wrapper {
+            height: fit-content;
+            background-color: $primary-color;
+        }
+        &-text {
+            width: 100%;
+            text-align: center;
+            h1 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+            &-buttons {
+                justify-content: center;
+            }
+        }
+        &-img {
+            margin: 24px auto;
+            img {
+                width: auto;
+            }
+        }
+    }
+}

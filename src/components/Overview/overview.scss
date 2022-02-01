@@ -1,0 +1,130 @@
+@use '../../sass/' as *;
+
+.overview {
+    padding: 100px 0 0;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        max-width: 1140px;
+        margin: 0 auto;
+        &__text {
+            width: 50%;
+            padding: 0 12px;
+            &--icon {
+                background-color: $primary-color;
+                border-radius: 8px;
+                color: #ffffff;
+                font-size: 20px;
+                line-height: 60px;
+                margin: 0px 0px 30px;
+                text-align: center;
+                width: 60px;
+                height: 60px;
+            }
+            h1 {
+                color:#081828;
+                font-family:inter;
+                font-size:30px;
+                font-weight:700;
+                line-height:42px;
+                margin:0px 0px 20px;
+            }
+            p {
+                color:#888888;
+                font-family:inter;
+                font-size:15px;
+                line-height:24px;
+                margin:0px 0px 15px;
+            }
+        }
+        &__img {
+            width: 50%;
+            padding: 0 50px;
+            img {
+                width: 446px;
+            }
+        }
+
+        &:nth-child(2) {
+            padding: 82px 0;
+        }
+    }
+
+    &-banner {
+        width: 100%;
+        padding: 130px 0px;
+        text-align: center;
+        background-color: $primary-color;
+
+        h1 {
+            color: #ffffff;
+            font-family: inter;
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 42px;
+            margin: 0px 0px 10px;
+            text-align: center;
+        }
+
+        p {
+            color: #ffffff;
+            font-family: inter;
+            font-size: 15px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        &__numbers {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 50px 0 0;
+            justify-content: center;
+
+            &--item {
+                padding: 0px 22px;
+                text-align: center;
+                width: 209px;
+                h3 {
+                    color: #ffffff;
+                    font-family: inter;
+                    font-size: 35px;
+                    font-weight: 800;
+                    line-height: 42px;
+                    margin: 0px 0px 5px;
+                    text-align: center;
+                }
+                span {
+                    color: #ffffff;
+                    font-family: inter;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    text-align: center;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .overview {
+        padding: 100px 0;
+    
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &-banner {
+            &__numbers {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+}

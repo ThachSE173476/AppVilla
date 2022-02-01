@@ -1,0 +1,41 @@
+@use '../../sass/' as *;
+
+.gridsidebar {
+    display: flex;
+    max-width: 1140px;
+    margin: auto;
+    &-main {
+        width: 66.66666%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &-card {
+        width: 45% !important;
+        margin-bottom: 30px;
+    }
+}
+
+@include tablet {
+    .gridsidebar {
+        flex-wrap: wrap;
+        padding: 0 10px;
+        &-main {
+            width: 100%;
+        }
+    }
+}
+
+@include mobile {
+    .gridsidebar {
+        flex-wrap: wrap;
+        padding: 0 10px;
+        &-main {
+            width: 100%;
+        }
+        &-card {
+            width: 100% !important;
+        }
+    }
+}

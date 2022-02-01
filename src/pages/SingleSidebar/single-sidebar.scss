@@ -1,0 +1,17 @@
+@use '../../sass/' as *;
+
+.single-sidebar {
+    padding: 100px 0;
+    display: flex;
+    max-width: 1140px;
+    margin: auto;
+    gap: 20px;
+}
+
+@include tablet {
+    .single-sidebar {
+        width: 100%;
+        padding: 100px 10px;
+        flex-wrap: wrap;
+    }
+}
